@@ -13,9 +13,15 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
+/* .container{
+  width: 100%;
+  overflow-x: hidden;
+} */
 body {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -211,71 +217,71 @@ body {
   padding: 5rem 0;
 }
 
-.team-wrapper{
+.team-wrapper {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 70%;
 }
 
-.team-member{
+.team-member {
   width: 35rem;
   background-color: #fffeee;
   padding: 1rem 1rem 2rem 1rem;
   box-shadow: 1rem 1rem 2rem #ddd, -1rem -1rem 2rem #eee;
   position: relative;
-  opacity: .7;
-  transition: opacity .5s;
+  opacity: 0.7;
+  transition: opacity 0.5s;
 }
 
-.team-member:hover{
+.team-member:hover {
   opacity: 1;
 }
 
-.team-member:first-child{
+.team-member:first-child {
   align-self: flex-end;
 }
-.team-member:last-child{
+.team-member:last-child {
   align-self: flex-start;
 }
 
-.team-member-img{
+.team-member-img {
   width: 100%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
 
-.team-member-name{
+.team-member-name {
   font-size: 2.3rem;
   font-weight: 700;
   color: #796717;
   margin-top: 2rem;
 }
 
-.team-member-name span{
+.team-member-name span {
   font-size: 1.7rem;
 }
 
-.team-member-skills{
+.team-member-skills {
   display: flex;
   justify-content: space-between;
   margin: 1rem 0 2rem 0;
 }
 
-.team-member-skills li{
+.team-member-skills li {
   font-size: 1.5rem;
   color: #505050;
 }
 
-.projects-btn{
+.projects-btn {
   background-color: #fab34a;
   color: #fff;
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 5rem;
   font-size: 1.5rem;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 
-.story-btn{
+.story-btn {
   width: 4rem;
   height: 4rem;
   background-color: #222;
@@ -285,26 +291,26 @@ body {
   border-radius: 5rem;
   display: flex;
   align-items: center;
-  padding: .5rem;
+  padding: 0.5rem;
   cursor: pointer;
   z-index: 50;
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 
-.change.story-btn{
+.change.story-btn {
   transform: rotate(405deg);
 }
 
-.story-btn-line{
+.story-btn-line {
   width: 100%;
-  height: .1rem;
+  height: 0.1rem;
   background-color: #fff;
 }
 
-.story{
+.story {
   width: 100%;
   height: 100%;
-  background-color: rgba(253, 69, 69, .9);
+  background-color: rgba(253, 69, 69, 0.9);
   position: absolute;
   top: 0;
   left: 0;
@@ -317,26 +323,141 @@ body {
   transform-origin: top right;
   /* border-radius: 50rem 0 50rem 50rem; */
   border-radius: 50%;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.change.story{
+.change.story {
   transform: scale(1);
   border-radius: 0;
 }
 
-.story-heading{
+.story-heading {
   font-size: 4rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 2rem;
 }
 
-.story-paragraph{
+.story-paragraph {
   font-size: 1.8rem;
   color: #eee;
   text-align: justify;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   text-indent: 2rem;
 }
 /* end ofsection 3 */
+
+/* section 4 */
+.section-4 {
+  width: 100%;
+  height: 130vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-container {
+  width: 80%;
+  height: 40%;
+  background-color: #e5e9ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0.3rem 0.3rem 0.4rem #ccc, -0.1rem -0.1rem 0.4rem #ccc;
+  border-radius: 0.5rem;
+  /* perspective defines how far an element is from the user */
+  perspective: 100rem;
+}
+
+.form-img {
+  width: 55rem;
+  background-color: rgba(50, 231, 255, 0.8);
+  padding: 5rem;
+  opacity: 0.8rem;
+  box-shadow: -3rem 3rem 4rem #aaa;
+  border-radius: 0.5rem;
+  transform: rotateY(20deg);
+  transition: all .5s;
+}
+
+.form-img:hover{
+  transform: translateY(-2rem) rotateY(30deg);
+  box-shadow: -5rem 5rem 7rem #aaa;
+}
+
+.contact-form {
+  width: 45rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 3rem 3rem 4rem #aaa;
+  transform: rotateY(-30deg);
+  transition: all .5s;
+}
+
+.contact-form:hover{
+  transform: translateY(-2rem) rotateY(-40deg);
+  box-shadow: 5rem 5rem 7rem #aaa;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow:  inset .1rem .1rem .2rem #ddd, inset -.1rem -.1rem .2rem #ddd;
+}
+
+.contact-form textarea{
+  max-height: 15rem;
+  min-height: 10rem;
+  max-width: 100%;
+  min-width: 70%;
+}
+
+.contact-form input[type='submit']{
+  background-color: rgba(50, 231, 255, .8);
+  color: #fff;
+  font-weight: bolder;
+  letter-spacing: .5rem;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.contact-form input[type='submit']:hover{
+  background-color: #32e7ff;
+}
+
+.copyright{
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  color: #444;
+  margin-top: 5rem;
+}
+
+.scroll-up-btn{
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: rgba(50, 231, 255, .8);
+  position: fixed;
+  bottom: 5rem;
+  right: 5rem;
+  font-size: 1.6rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color .5s;
+}
+
+.scroll-up-btn:hover{
+  background-color: #32e7ff;
+}
+/* end of section 4 */
